@@ -6,7 +6,6 @@ defmodule Exercise1Test do
     assert Exercise1.reverse('Panama') == 'amanaP'
   end
 
-  @tag :pending
   test "replaces any lowercase character in a given 'charlist' by its corresponding uppercase" do
     assert Exercise1.upcase('abracadabra') == 'ABRACADABRA'
     assert Exercise1.upcase('Panama') == 'PANAMA'
