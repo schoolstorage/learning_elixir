@@ -16,18 +16,15 @@ defmodule Exercise1Test do
     assert Exercise1.remove_non_alpha('w1o2r3d') == 'word'
   end
 
-  @tag :pending
   test "checks simple words" do
     assert Exercise1.palindrome('redivider') == true
     assert Exercise1.palindrome('abracadabra') == false
   end
 
-  @tag :pending
   test "checks words, case insensitively" do
     assert Exercise1.palindrome('ReDivider') == true
   end
 
-  @tag :pending
   test "ignores non alphabetic characters" do
     assert Exercise1.palindrome('A man, a plan, a canal -- Panama') == true
     assert Exercise1.palindrome('Madam, I\'m Adam!') == true
