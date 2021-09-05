@@ -11,7 +11,6 @@ defmodule Exercise1Test do
     assert Exercise1.upcase('Panama') == 'PANAMA'
   end
 
-  @tag :pending
   test "removes non alphabetical caracters from a given 'charlist'" do
     assert Exercise1.remove_non_alpha('w o r d') == 'word'
     assert Exercise1.remove_non_alpha('w1o2r3d') == 'word'

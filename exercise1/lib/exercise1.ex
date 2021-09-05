@@ -8,4 +8,8 @@ defmodule Exercise1 do
     Exercise1.Uppercase.upcase(chararray)
   end
 
+  def remove_non_alpha(chararray) do
+    Exercise1.NonAlpha.remove_non_alpha(chararray)
+  end
+
 end
