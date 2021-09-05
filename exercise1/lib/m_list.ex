@@ -1,4 +1,4 @@
-defmodule MList do
+defmodule Exercise1.MList do
     def map([], _fun), do: []
     def map([head|tail], fun), do: [fun.(head) | map(tail, fun)]
 
