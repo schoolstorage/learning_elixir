@@ -1,17 +1,14 @@
 defmodule DnaAnalysisTest do
   use ExUnit.Case
 
-  # @tag :pending
   test "empty dna string has no adenine" do
     assert DnaAnalysis.count('', ?A) == 0
   end
 
-  @tag :pending
   test "repetitive cytosine gets counted" do
     assert DnaAnalysis.count('CCCCC', ?C) == 5
   end
 
-  @tag :pending
   test "counts only thymine" do
     assert DnaAnalysis.count('GGGGGTAACCCGG', ?T) == 1
   end
