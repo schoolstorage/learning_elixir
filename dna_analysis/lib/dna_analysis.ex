@@ -17,6 +17,19 @@ defmodule DnaAnalysis do
     end
   end
 
+  # --------------------------------------------------------------------------
+  def histogram(collection) do
+    map = scroll_more(collection)
+    IO.inspect map
+  end
 
+  def update_map(map) do
+    IO.inspect map
+  end
+
+  def scroll_more([]), do: %{}
+  def scroll_more([head | tail]) do
+    %{scroll_more(tail) | head: 0}
+  end
 
 end
