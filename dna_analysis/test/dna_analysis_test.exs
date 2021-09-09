@@ -16,7 +16,7 @@ defmodule DnaAnalysisTest do
   @tag :pending
   test "empty dna string has no nucleotides" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 0}
-    assert DnaAnalysis.histogram('') == expected
+    assert DnaAnalysis.histogram('AABBCC') == expected
   end
 
   @tag :pending
