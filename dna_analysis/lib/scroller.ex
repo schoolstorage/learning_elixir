@@ -1,12 +1,12 @@
 defmodule DnaAnalysis.Scroller do
 
   def histogram(collection) do
-    scroll(collection, fn(map, head) ->  end)
+    IO.inspect scroll(collection)
   end
 
-  def scroll([], fun), do: %{}
-  def scroll([head | tail], fun) do
-    fun.(scroll(tail, fun), head)
+  def scroll([]), do: %{}
+  def scroll([head | tail]) do
+    %{ scroll(tail) | head => 1 }
   end
 
 end
