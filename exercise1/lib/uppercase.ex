@@ -1,8 +1,13 @@
 defmodule Exercise1.Uppercase do
 
   def upcase(chararray) do
-    scroll(chararray, fn (head) -> to_upper_case(head) end)
+    # scroll(chararray, fn (head) -> to_upper_case(head) end)
+    ucase(chararray)
   end
+
+  defp ucase([]), do: []
+  defp ucase([head | tail]) when head in ?a .. ?z, do: [head - 32 | ucase(tail)]
+  defp ucase([head | tail]), do: [head | ucase(tail)]
 
   def scroll([], fun), do: []
   def scroll([head | tail], fun) do
