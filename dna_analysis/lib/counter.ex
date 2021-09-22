@@ -1,21 +1,11 @@
 defmodule DnaAnalysis.Counter do
 
   def count(collection, char_code) do
-    scroll(collection, fn(head) -> check(head, char_code) end)
+    scroll(collection, char_code)
   end
 
-  defp scroll([], fun), do: 0
-
-  defp scroll([head | tail], fun) do
-    fun.(head) + scroll(tail, fun)
-  end
-
-  defp check(head, char_code) do
-    if head == char_code do
-      1
-    else
-      0
-    end
-  end
+  def scroll([], _), do: 0
+  def scroll([head | tail], char_code) when head == char_code, do: scroll(tail, char_code) + 1
+  def scroll([head | tail], char_code), do: scroll(tail, char_code)
 
 end

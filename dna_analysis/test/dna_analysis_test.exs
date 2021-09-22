@@ -13,19 +13,16 @@ defmodule DnaAnalysisTest do
     assert DnaAnalysis.count('GGGGGTAACCCGG', ?T) == 1
   end
 
-  @tag :pending
   test "empty dna string has no nucleotides" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 0}
-    assert DnaAnalysis.histogram('AABBCC') == expected
+    assert DnaAnalysis.histogram('') == expected
   end
 
-  @tag :pending
   test "repetitive sequence has only guanine" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 8}
     assert DnaAnalysis.histogram('GGGGGGGG') == expected
   end
 
-  @tag :pending
   test "counts all nucleotides" do
     s = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     expected = %{?A => 20, ?T => 21, ?C => 12, ?G => 17}
