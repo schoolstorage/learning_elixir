@@ -1,7 +1,18 @@
 defmodule Yahtzee do
+  @moduledoc """
+  Documentation for `Yahtzee`.
+  """
 
-  def score_upper(scores) do
-    %{Ones: 1}
+  @doc """
+  Hello world.
+
+  ## Examples
+
+      iex> Yahtzee.hello()
+      :world
+
+  """
+  def hello do
+    :world
   end
-
 end
